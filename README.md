@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# Balaveerulu
 
-## Project info
+A modern React/TypeScript web application for personalized children's book services.
 
-**URL**: https://lovable.dev/projects/b5bc3f2d-974a-4df4-905f-af27eb5a3b3e
+## Project Owner
 
-## How can I edit this code?
+**Vamsi Siva Ganes Seelam**
 
-There are several ways of editing your application.
+## Project Info
 
-**Use Lovable**
+**Live Site**: https://balaveerulu.vercel.app/  
+**Repository**: https://github.com/Svamsi2006/balaveerulu
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b5bc3f2d-974a-4df4-905f-af27eb5a3b3e) and start prompting.
+## About Balaveerulu
 
-Changes made via Lovable will be committed automatically to this repo.
+Balaveerulu is a web platform that allows parents to create personalized children's books featuring their kids as heroes in exciting adventures. The platform offers various book themes including superhero stories, mythology, and educational content.
 
-**Use your preferred IDE**
+## Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 📚 Personalized children's book creation
+- 🎨 Multiple book themes and templates
+- 🛒 Shopping cart and order management
+- 💳 Integrated payment processing (Razorpay)
+- 👤 User authentication and profiles
+- 📱 Responsive design for all devices
+- 🌙 Dark/Light theme toggle
+- 💬 AI-powered floating chatbot
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Technologies Used
 
-Follow these steps:
+This project is built with modern web technologies:
 
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Backend**: Supabase (Database & Authentication)
+- **Payment**: Razorpay integration
+- **Deployment**: Vercel
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/Svamsi2006/balaveerulu.git
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Navigate to the project directory:
+```sh
+cd balaveerulu
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. Install dependencies:
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+4. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. Open your browser and visit `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components
+├── contexts/           # React contexts
+├── hooks/              # Custom hooks
+├── lib/                # Utility libraries
+├── integrations/       # Third-party integrations
+└── utils/              # Helper functions
+```
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application is deployed on Vercel and automatically updates when changes are pushed to the main branch.
 
-## How can I deploy this project?
+## Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/b5bc3f2d-974a-4df4-905f-af27eb5a3b3e) and click on Share -> Publish.
+This is a personal project owned by Vamsi Siva Ganes Seelam. For any questions or collaboration opportunities, please reach out through the contact information provided on the website.
 
-## Can I connect a custom domain to my Lovable project?
+## License
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2025 Vamsi Siva Ganes Seelam. All rights reserved.
