@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 210 100% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 15%;
+
+    --primary: 270 95% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 100% 85%;
+    --secondary-foreground: 210 100% 15%;
+
+    --muted: 45 100% 92%;
+    --muted-foreground: 210 50% 40%;
+
+    --accent: 15 100% 85%;
+    --accent-foreground: 210 100% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 100% 88%;
+    --input: 45 100% 88%;
+    --ring: 270 95% 60%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 350 100% 98%;
+    --sidebar-foreground: 210 100% 15%;
+    --sidebar-primary: 270 95% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 100% 85%;
+    --sidebar-accent-foreground: 210 100% 15%;
+    --sidebar-border: 45 100% 88%;
+    --sidebar-ring: 270 95% 60%;
+  }
+
+  .dark {
+    --background: 250 50% 5%;
+    --foreground: 45 100% 95%;
+
+    --card: 250 50% 8%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 250 50% 8%;
+    --popover-foreground: 45 100% 95%;
+
+    --primary: 270 95% 70%;
+    --primary-foreground: 250 50% 5%;
+
+    --secondary: 250 50% 15%;
+    --secondary-foreground: 45 100% 95%;
+
+    --muted: 250 50% 15%;
+    --muted-foreground: 45 50% 70%;
+
+    --accent: 250 50% 15%;
+    --accent-foreground: 45 100% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 250 50% 15%;
+    --input: 250 50% 15%;
+    --ring: 270 95% 70%;
+    
+    --sidebar-background: 250 50% 5%;
+    --sidebar-foreground: 45 100% 95%;
+    --sidebar-primary: 270 95% 70%;
+    --sidebar-primary-foreground: 250 50% 5%;
+    --sidebar-accent: 250 50% 15%;
+    --sidebar-accent-foreground: 45 100% 95%;
+    --sidebar-border: 250 50% 15%;
+    --sidebar-ring: 270 95% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 text-foreground;
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+    min-height: 100vh;
+  }
+
+  .dark body {
+    @apply bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900;
+  }
+
+  .font-comic {
+    font-family: 'Fredoka', 'Nunito', 'Comic Sans MS', cursive;
+    font-weight: 600;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-fredoka {
+    font-family: 'Fredoka', sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-rainbow {
+    animation: rainbow 3s linear infinite;
+  }
+
+  .animate-pulse-rainbow {
+    animation: pulse-rainbow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-rotate-slow {
+    animation: rotate-slow 10s linear infinite;
+  }
+
+  .child-card {
+    @apply bg-gradient-to-br from-white to-pink-50 border-4 border-pink-200 rounded-3xl shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .dark .child-card {
+    @apply from-purple-900/50 to-blue-900/50 border-purple-400/50;
+  }
+
+  .hero-text {
+    @apply bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent;
+  }
+
+  .fun-button {
+    @apply bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 hover:from-pink-500 hover:via-purple-600 hover:to-indigo-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-2xl;
+  }
+
+  .sticker {
+    @apply bg-gradient-to-br from-yellow-300 to-orange-400 text-white font-black text-xs px-3 py-1 rounded-full transform rotate-12 shadow-lg;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    50% { transform: translateY(-5px) rotate(-1deg); }
+    75% { transform: translateY(-15px) rotate(1deg); }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes pulse-rainbow {
+    0% { background-size: 100% 100%; }
+    100% { background-size: 200% 200%; }
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .sparkle::before {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  .star-bg {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, #FFD700, transparent),
+      radial-gradient(2px 2px at 40px 70px, #FF69B4, transparent),
+      radial-gradient(1px 1px at 90px 40px, #00BFFF, transparent),
+      radial-gradient(1px 1px at 130px 80px, #32CD32, transparent),
+      radial-gradient(2px 2px at 160px 30px, #FF4500, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: rainbow 5s linear infinite;
+  }
+}
+
+/* Fun scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #fef2f2, #fdf4ff);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ec4899, #8b5cf6, #06b6d4);
+  border-radius: 10px;
+  border: 2px solid #fef2f2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #db2777, #7c3aed, #0891b2);
+}
