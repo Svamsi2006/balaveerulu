@@ -1,4 +1,3 @@
-
 import { Heart, Users, Star, BookOpen } from "lucide-react";
 
 const About = () => {
